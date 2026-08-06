@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PARAD1SE Internet Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<header>
+
+<h1>
+<i class="fa-solid fa-globe"></i>
+PARAD1SE
+</h1>
+
+<p>Internet Dashboard</p>
+
+
+<div class="clock">
+
+<i class="fa-solid fa-clock"></i>
+
+<span id="clock">
+Loading...
+</span>
+
+<br>
+
+<small id="date">
+Loading...
+</small>
+
+<br>
+
+<small id="clock-zone">
+Europe
+</small>
+
+</div>
+
+</header>
+
+
+
+<section class="card">
+
+<h2>
+<i class="fa-solid fa-earth-americas"></i>
+Your IP
+</h2>
+
+
+<div class="info">
+<span>IP Address</span>
+
+<strong>
+<span id="ip">Loading...</span>
+
+<button onclick="copyIP()">
+<i class="fa-solid fa-copy"></i>
+</button>
+
+</strong>
+
+</div>
+
+
+<div class="info">
+<span>Country</span>
+<strong id="country">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>City</span>
+<strong id="city">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>ISP</span>
+<strong id="isp">Loading...</strong>
+</div>
+
+
+</section>
+
+
+
+
+<section class="card">
+
+<h2>
+<i class="fa-solid fa-location-dot"></i>
+IP Location
+</h2>
+
+
+<div id="map"></div>
+
+
+</section>
+
+
+
+
+
+<section class="card">
+
+<h2>
+<i class="fa-solid fa-rocket"></i>
+Internet Speed Test
+</h2>
+
+
+<div class="info">
+
+<span>Download</span>
+
+<strong id="speed">
+Not tested
+</strong>
+
+</div>
+
+
+<button onclick="speedTest()">
+
+<i class="fa-solid fa-play"></i>
+
+START TEST
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+<div class="grid">
+
+
+<section class="card">
+
+<h2>
+<i class="fa-solid fa-laptop"></i>
+Device
+</h2>
+
+
+<div class="info">
+<span>Browser</span>
+<strong id="browser">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>OS</span>
+<strong id="os">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>Screen</span>
+<strong id="screen">Loading...</strong>
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="card">
+
+<h2>
+<i class="fa-solid fa-microchip"></i>
+Hardware
+</h2>
+
+
+<div class="info">
+<span>CPU Cores</span>
+<strong id="cpu">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>RAM</span>
+<strong id="ram">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>Status</span>
+<strong id="online">Loading...</strong>
+</div>
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+
+
+<section class="card">
+
+<h2>
+<i class="fa-solid fa-wifi"></i>
+Internet Provider
+</h2>
+
+
+<div class="info">
+<span>ISP</span>
+<strong id="provider">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>ASN</span>
+<strong id="asn">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>Type</span>
+<strong id="type">Loading...</strong>
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="card">
+
+
+<h2>
+<i class="fa-solid fa-gauge-high"></i>
+Ping Test
+</h2>
+
+
+<div class="info">
+
+<span>Latency</span>
+
+<strong id="ping">
+Not tested
+</strong>
+
+</div>
+
+
+<button onclick="testPing()">
+
+<i class="fa-solid fa-bolt"></i>
+
+TEST PING
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+<section class="card">
+
+
+<h2>
+<i class="fa-solid fa-language"></i>
+System
+</h2>
+
+
+<div class="info">
+<span>Language</span>
+<strong id="language">Loading...</strong>
+</div>
+
+
+<div class="info">
+<span>Timezone</span>
+<strong id="timezone">Loading...</strong>
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<i class="fa-solid fa-code"></i>
+
+PARAD1SE Dashboard v3.0
+
+</footer>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
